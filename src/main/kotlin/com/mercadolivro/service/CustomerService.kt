@@ -15,6 +15,7 @@ class CustomerService(
 
     fun getAll( name: String?):  List<CustomerModel> {
         name?.let {
+            print("test")
             return customerRepository.findByNameContaining(it)
         }
         return customerRepository.findAll().toList()
